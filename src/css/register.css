@@ -1,0 +1,359 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#111;
+    overflow:hidden;
+    color:white;
+}
+
+/* =========================
+LOGO
+========================= */
+
+.top-bar{
+    position:absolute;
+    top:-40px;
+    right:1700px;
+    z-index:10;
+}
+
+.logo{
+    width:180px;
+}
+
+/* =========================
+SPLIT
+========================= */
+
+.split{
+    width:100%;
+    height:100vh;
+    display:flex;
+}
+
+/* =========================
+LEFT
+========================= */
+
+.left{
+    flex:1;
+    position:relative;
+    overflow:hidden;
+}
+
+.bg-city{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0.35);
+}
+
+/* sombra oscura */
+.left::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.3)
+    );
+    z-index:1;
+}
+
+.mascota{
+    position:absolute;
+    bottom:0;
+    left:40px;
+    width:420px;
+    z-index:2;
+}
+
+/* textos */
+
+.left h2{
+    position:absolute;
+    bottom:620px;
+    left:480px;
+
+    font-size:48px;
+    z-index:2;
+
+    font-weight:bold;
+}
+
+.left p{
+    position:absolute;
+    bottom:600px;
+    left:485px;
+
+    z-index:2;
+
+    color:#ddd;
+    font-size:18px;
+}
+
+/* =========================
+RIGHT
+========================= */
+
+.right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+}
+
+/* =========================
+CARD
+========================= */
+
+.card{
+    width:430px;
+    padding:35px;
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 30px rgba(255,0,0,0.2);
+}
+
+.card h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+/* =========================
+CARD VISA
+========================= */
+
+.credit-card{
+    width:100%;
+    height:190px;
+    border-radius:22px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #6b0000,
+        #ff0000
+    );
+
+    position:relative;
+
+    margin-bottom:25px;
+
+    overflow:hidden;
+}
+
+.credit-card::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    top:-120px;
+    right:-100px;
+}
+
+.chip{
+    width:60px;
+    height:45px;
+    background:gold;
+    border-radius:10px;
+
+    position:absolute;
+    top:25px;
+    left:25px;
+}
+
+.card-number{
+    position:absolute;
+    bottom:65px;
+    left:25px;
+
+    letter-spacing:3px;
+    font-size:20px;
+}
+
+.card-name{
+    position:absolute;
+    bottom:25px;
+    left:25px;
+
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+/* =========================
+FORM
+========================= */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+input{
+    padding:14px;
+    border:none;
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.12);
+
+    color:white;
+
+    outline:none;
+
+    transition:0.3s;
+}
+
+input:focus{
+    border:1px solid red;
+    background:rgba(255,255,255,0.18);
+}
+
+input::placeholder{
+    color:#ccc;
+}
+
+/* =========================
+PIN
+========================= */
+
+.security-box{
+    margin-top:10px;
+    text-align:center;
+}
+
+.security-box p{
+    margin-bottom:12px;
+    color:#ddd;
+}
+
+.pin{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.pin input{
+    width:50px;
+    height:50px;
+    text-align:center;
+    font-size:20px;
+}
+
+/* =========================
+BUTTON
+========================= */
+
+button{
+    margin-top:15px;
+    padding:15px;
+
+    border:none;
+    border-radius:14px;
+
+    background:#c00000;
+
+    color:white;
+
+    font-weight:bold;
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    background:red;
+    transform:translateY(-2px);
+}
+
+/* =========================
+LINK
+========================= */
+
+a{
+    display:block;
+    margin-top:18px;
+    text-align:center;
+    color:#ddd;
+    text-decoration:none;
+}
+
+a:hover{
+    color:white;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .split{
+        flex-direction:column;
+    }
+
+    .left{
+        display:none;
+    }
+
+    .right{
+        width:100%;
+        height:100vh;
+    }
+
+    .card{
+        width:90%;
+    }
+}
+
+/* =========================
+LOADING SCREEN
+========================= */
+
+.loading-screen{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+}
+
+.loading-video{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}

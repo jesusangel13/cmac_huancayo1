@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Registro | CMAC Huancayo</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/register.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =========================
+    LOGO
+    ========================== -->
+
+    <header class="top-bar">
+
+        <img
+            src="/img/caja-huancayo-logo-png_seeklogo-437667.png"
+            class="logo"
+        >
+
+    </header>
+
+
+    <!-- =========================
+    SPLIT
+    ========================== -->
+
+    <div class="split">
+
+        <!-- =========================
+        LEFT
+        ========================== -->
+
+        <div class="left">
+
+            <img
+                src="/img/Machu_Picchu,_Peru_(2018).jpg.webp"
+                class="bg-city"
+            >
+
+            <img
+                src="/img/mascota.png"
+                class="mascota"
+            >
+
+            <h2>Huancayo Digital</h2>
+
+            <p>
+                Seguridad y confianza bancaria
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+        RIGHT
+        ========================== -->
+
+        <div class="right">
+
+            <div class="card">
+
+                <h2>Crear Cuenta</h2>
+
+
+                <!-- =========================
+                TARJETA
+                ========================== -->
+
+                <div class="credit-card">
+
+                    <div class="chip"></div>
+
+                    <div class="card-number">
+                        **** **** **** 2048
+                    </div>
+
+                    <div class="card-name">
+                        CMAC HUANCAYO
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                FORMULARIO
+                ========================== -->
+
+                <form
+                    action="/register"
+                    method="post"
+                    id="registerForm"
+                >
+
+                    <input
+                        type="text"
+                        name="nombre"
+                        placeholder="Nombre completo"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        name="dni"
+                        placeholder="DNI"
+                        maxlength="8"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        name="tarjeta"
+                        placeholder="Número de tarjeta"
+                        maxlength="16"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        name="correo"
+                        placeholder="Correo electrónico"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Contraseña"
+                        required
+                    >
+
+
+                    <!-- =========================
+                    CÓDIGO SEGURIDAD
+                    ========================== -->
+
+                    <div class="security-box">
+
+                        <p>
+                            🔐 Código de seguridad
+                        </p>
+
+                        <div class="pin">
+
+                            <input
+                                type="password"
+                                name="pin1"
+                                maxlength="1"
+                                required
+                            >
+
+                            <input
+                                type="password"
+                                name="pin2"
+                                maxlength="1"
+                                required
+                            >
+
+                            <input
+                                type="password"
+                                name="pin3"
+                                maxlength="1"
+                                required
+                            >
+
+                            <input
+                                type="password"
+                                name="pin4"
+                                maxlength="1"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                    BOTÓN
+                    ========================== -->
+
+                    <button type="submit">
+
+                        REGISTRARME
+
+                    </button>
+
+                </form>
+
+
+                <!-- =========================
+                LOGIN
+                ========================== -->
+
+                <a
+                    href="/"
+                    id="goLogin"
+                >
+
+                    Ya tengo cuenta
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+    PANTALLA DE CARGA
+    ========================== -->
+
+    <div
+        class="loading-screen"
+        id="loadingScreen"
+    >
+
+        <video
+            autoplay
+            muted
+            playsinline
+            class="loading-video"
+            id="loadingVideo"
+        >
+
+            <source
+                src="/videos/hacker wallpaper video download.mp4"
+                type="video/mp4"
+            >
+
+        </video>
+
+    </div>
+
+
+    <!-- =========================
+    JS
+    ========================== -->
+
+    <script src="/js/register.js"></script>
+
+</body>
+
+</html>
